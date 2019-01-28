@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "nombre": "De la Huerta",
+        "ingredientes":[
+            "Pimiento rojo",
+            "Pimiento verde",
+            "Cebolla",
+            "Champiñon",
+            "Aceitunas negras"
+        ],
+        "precio": 19.95,
+        "foto":"https://www.dominospizza.es/images/tony_pepperoni.png"
+    },
+    {
+        "id": 2,
+        "nombre": "Tandem Gourmet",
+        "ingredientes":[
+            "Salsa Carbonara",
+            "Champiñon",
+            "Cebolla",
+            "Salsa Barbacoa",
+            "Carne de vacuno",
+            "Bacon",
+            "Pollo marinado"
+        ],
+        "precio": 21.95,
+        "foto":"https://www.dominospizza.es/images/hawaiana_plus.png"
+
+    },
+    {
+        "id":3,
+        "nombre": "Barbacoa Gourmet",
+        "ingredientes":[
+          "5 Quesos Gourmet",
+          "Salsa Barbacoa",
+          "Bacon",
+          "Pollo marinado",
+          "Carne de vacuno"  
+        ],
+        "precio":21.95,
+        "foto":"https://www.dominospizza.es/images/pizza_texas.png"
+    },
+    {
+        "id": 4,
+        "nombre": "Carbonara Gourmet Queso",
+        "ingredientes":[
+          "5 Quesos Gourmet",
+          "Salsa Carbonara",
+          "Bacon (x2)",
+          "Champiñon",
+          "Extra Queso"  
+        ],
+        "precio":21.95,
+        "foto":"https://www.dominospizza.es/images/6quesos.png"
+    },
+    {
+        "id": 5,
+        "nombre": "Florentina",
+        "ingredientes":[
+          "Salsa Carbonara",
+          "Rúcula",
+          "Queso de rulo",
+          "Tomate natural"  
+        ],
+        "precio":21.95,
+        "foto":"https://www.dominospizza.es/images/pollo_a_la_parrilla.png"
+    },
+    {
+        "id": 6,
+        "nombre": "Jalisco",
+        "ingredientes":[
+            "Salsa Jalisco",
+            "Carne de vacuno",
+            "Cebolla",
+            "Pimiento morrón",
+            "Aceitunas negras"
+        ],
+        "precio":23,
+        "foto":"https://www.dominospizza.es/images/cenitales_kansas.png"
+    }
+]
