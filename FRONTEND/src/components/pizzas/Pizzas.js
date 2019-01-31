@@ -89,7 +89,7 @@ export class Pizzas extends Component {
               className="btn btn-danger col"
               id={this.id}
               // onClick={this.props.add}
-              // onClick={this.props.addPizza.bind(this, this.nombre)}
+              onClick={this.props.addPizza.bind(this, this.nombre)}
               //CAMBIAR FUNCION PARA PASAR EL ESTADo QUE SEA UN OBJETO DE SIZE, QTY Y NOPMBRE
               // onClick={() => this.props.addPizza({this.})}
 

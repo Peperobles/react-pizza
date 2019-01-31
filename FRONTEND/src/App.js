@@ -47,7 +47,6 @@ class App extends Component {
 
 
     console.log(this.state.list)
-    console.log("PRUEBA: " + this.state.prueba);
 
   }
 

@@ -1,13 +1,18 @@
 import React, { Component } from "react";
 
 import {
+  Button,
   Collapse,
   Navbar,
   NavbarToggler,
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink
+  NavLink,
+  Modal,
+  ModalHeader,
+  ModalBody,
+  ModalFooter
 } from "reactstrap";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -30,13 +35,15 @@ class Carrito extends Component {
     super(props);
     this.toggle = this.toggle.bind(this);
     this.state = {
-      isOpen: false
+      isOpen: false,
+      modal: false
     };
   }
 
   toggle() {
     this.setState({
-      isOpen: !this.state.isOpen
+      // isOpen: !this.state.isOpen
+      modal: !this.state.modal
     });
   }
 
@@ -66,15 +73,40 @@ class Carrito extends Component {
             <Nav className="ml-auto" navbar>
               <NavItem>
                 <NavLink>
-                  {this.props.articulos}{this.props.pizzas}
-                  <button onClick={this.toggle}>
+                  {this.props.articulos} {this.props.pizzas}
+                  <button
+                    onClick={this.toggle}
+                    // type="button"
+                    // data-toggle="collapse"
+                    // data-target="#collapseExample"
+                    // aria-expanded="false"
+                    // aria-controls="collapseExample"
+                  >
                     <FontAwesomeIcon icon={faShoppingCart} />
                   </button>
                 </NavLink>
+                <div class="collapse" id="collapseExample">
+                  <div className="card card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life
+                    accusamus terry richardson ad squid. Nihil anim keffiyeh
+                    helvetica, craft beer labore wes anderson cred nesciunt
+                    sapiente ea proident.
+                  </div>
+                </div>
               </NavItem>
             </Nav>
           </Collapse>
         </Navbar>
+        <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+          <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
+          <ModalBody>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </ModalBody>
+          <ModalFooter>
+            <Button color="primary" onClick={this.toggle}>Do Something</Button>{' '}
+            <Button color="secondary" onClick={this.toggle}>Cancel</Button>
+          </ModalFooter>
+        </Modal>
       </div>
     );
   }
