@@ -17,34 +17,19 @@ class App extends Component {
   }
 
   //AÑADIR ARTICULOS
-  addPizza = (nombre) => {
+  addPizza = (nombre, precio, size, qty) => {
 
     function getOccurrence(array, value) {
       return array.filter((v) => (v === value)).length;
     }
     //Hay que sumarle uno porque por defecto empieza desde cero el length
     console.log(1 + getOccurrence(this.state.list, nombre));
-    // let a = 1 + getOccurrence(this.state.list, nombre);
 
-    // let b = a+nombre;
-    // console.log(1 + getOccurrence(this.state.list, b));
-
-
-    // if (this.state.list.includes(nombre)) {
-    //   this.setState(previousState => ({
-    //     list: [...previousState.list, nombre]
-    //   }));
-    // }
     this.setState(previousState => ({
-    list: [...previousState.list, nombre]  
+    list: [...previousState.list,{nombre, precio, size, qty}]  
     }));
-    // Añadir nombre de pizza al array
-    // this.setState(previousState => ({
-    //   list: [...previousState.list, nombre]
-    // }));
-    // Sumar uno al estado del articulo
-    this.setState({ articulos: this.state.articulos + 1 });
 
+    this.setState({ articulos: this.state.articulos + 1 });
 
     console.log(this.state.list)
 

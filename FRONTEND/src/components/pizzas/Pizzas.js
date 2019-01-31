@@ -30,12 +30,14 @@ export class Pizzas extends Component {
     });
   }
   handleSize = (event) => {
+    console.log(event.target.value)
     this.setState({
       size: event.target.value
     })
+    // console.log(this.state.size)
+    
   }
   handleQty = (event) => {
-    console.log(event.target.value)
     this.setState({
       qty: event.target.value
     })
@@ -44,6 +46,9 @@ export class Pizzas extends Component {
   render() {
     //Pasar array de ingredientes a string.
     const ingredientesMapeados = this.props.ingredientes.toString();
+    if (this.state.size === "Familiar"){
+      console.log("HOLA")
+    } 
 
     return (
       <div className="col shadow p-3 mb-5 bg-white rounded m-1">
@@ -89,7 +94,7 @@ export class Pizzas extends Component {
               className="btn btn-danger col"
               id={this.id}
               // onClick={this.props.add}
-              onClick={this.props.addPizza.bind(this, this.nombre)}
+              onClick={this.props.addPizza.bind(this, this.nombre, this.precio, this.state.size, this.state.qty)}
               //CAMBIAR FUNCION PARA PASAR EL ESTADo QUE SEA UN OBJETO DE SIZE, QTY Y NOPMBRE
               // onClick={() => this.props.addPizza({this.})}
 
