@@ -69,19 +69,19 @@ class Carrito extends Component {
                 <h6>{pizza.nombre}</h6>
                 <p>{pizza.size}</p>
                 {pizza.size === 'Familiar'
-              ? <div><p>{pizza.qty} x {pizza.precio *1.5} €</p></div>
-              :<div><p>{pizza.precio * pizza.qty} €</p></div>}
-                
-                
+                  ? <div><p>{pizza.qty} x {pizza.precio * 1.5} €</p></div>
+                  : <div><p>{pizza.qty} x {pizza.precio} €</p></div>}
+
+
               </div>
             ))}
           </ModalBody>
           <ModalFooter>
             <Button color="primary" onClick={this.toggle}>
-              Do Something
+              CESTA DE LA COMPRA
             </Button>{" "}
             <Button color="secondary" onClick={this.toggle}>
-              Cancel
+              CERRAR
             </Button>
           </ModalFooter>
         </Modal>

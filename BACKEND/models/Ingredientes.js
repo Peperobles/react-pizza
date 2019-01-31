@@ -5,4 +5,4 @@ var proyectosSchema = Schema({
     estado: String,
     contenido: String
 })
-module.exports = mongoose.model('pizzas', proyectosSchema);
+module.exports = mongoose.model('ingredientes', proyectosSchema);

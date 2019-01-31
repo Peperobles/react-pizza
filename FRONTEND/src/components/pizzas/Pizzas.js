@@ -1,10 +1,6 @@
 import React, { Component } from "react";
-// import "../../add/css/bootstrap.min.css";
 
 import { Button, Popover, PopoverHeader, PopoverBody } from "reactstrap";
-
-//COMPONENTE
-// import Carrito from '../carrito/carrito';
 
 export class Pizzas extends Component {
   constructor(props) {
@@ -33,9 +29,7 @@ export class Pizzas extends Component {
     console.log(event.target.value)
     this.setState({
       size: event.target.value
-    })
-    // console.log(this.state.size)
-    
+    })    
   }
   handleQty = (event) => {
     this.setState({
@@ -55,8 +49,7 @@ export class Pizzas extends Component {
         <div id={this.id}>
           <img src={this.foto} alt={this.nombre} />
           <p>{this.nombre}</p>
-          {/* <p>INGREDIENTES: {this.ingredientes}</p> */}
-          <p>PRECIO: {this.precio}</p>
+          <p>PRECIO: {this.precio} €</p>
           <Button
             id={"Popover-" + this.props.id}
             type="button"
@@ -93,12 +86,7 @@ export class Pizzas extends Component {
             <button
               className="btn btn-danger col"
               id={this.id}
-              // onClick={this.props.add}
               onClick={this.props.addPizza.bind(this, this.nombre, this.precio, this.state.size, this.state.qty)}
-              //CAMBIAR FUNCION PARA PASAR EL ESTADo QUE SEA UN OBJETO DE SIZE, QTY Y NOPMBRE
-              // onClick={() => this.props.addPizza({this.})}
-
-              // title={this.nombre}
             >
               COMPRAR
             </button>

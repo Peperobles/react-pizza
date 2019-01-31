@@ -1,42 +1,10 @@
-[
-    {
-        "id": 1,
-        "nombre": "Salsa Tomate"
-    },
-    {
-        "id": 2,
-        "nombre": "Queso Vegano"
-    },
-    {
-        "id": 3,
-        "nombre": "Champiñones"
-    },
-    {
-        "id": 4,
-        "nombre": "Cebolla"
-    },
-    {
-        "id": 5,
-        "nombre": "Pimientos"
-    },
-    {
-        "id": 6,
-        "nombre": "Brocoli"
-    },
-    {
-        "id": 7,
-        "nombre": "Aceitunas"
-    },
-    {
-        "id": 8,
-        "nombre": "Alcaparras"
-    },
-    {
-        "id": 9,
-        "nombre": "Coliflor"
-    },
-    {
-        "id": 10,
-        "nombre": "Jalapeños"
-    }
-]
+{"nombre": "Salsa Tomate"}
+{"nombre": "Queso Vegano"}
+{"nombre": "Champiñones"}
+{"nombre": "Cebolla"}
+{"nombre": "Pimientos"}
+{"nombre": "Brocoli"}
+{"nombre": "Aceitunas"}
+{"nombre": "Alcaparras"}
+{"nombre": "Coliflor"}
+{"nombre": "Jalapeños"}
