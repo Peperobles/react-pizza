@@ -12,7 +12,6 @@ class App extends Component {
     this.state = {
       articulos: 0,
       list: [],
-      // prueba: 0
     };
   }
 

@@ -2,7 +2,10 @@ var mongoose = require('../config');
 var Schema = mongoose.Schema;
 
 var proyectosSchema = Schema({
-    estado: String,
-    contenido: String
+    nombre: String,
+    ingredientes: Array,
+    precio: Number,
+    foto: String
+
 })
 module.exports = mongoose.model('pizzas', proyectosSchema);

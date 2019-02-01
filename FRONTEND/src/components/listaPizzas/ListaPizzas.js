@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 
-// import pizzas from '../../data/pizzas.json';
-
 import axios from 'axios';
 
 import Pizzas from '../pizzas/Pizzas';
@@ -49,8 +47,7 @@ export class ListaPizzas extends Component {
 
           <PizzaMitades 
           addPizza = {this.props.addPizza}
-          pizzasNombres = {this.state.pizzas.map((pizza) => pizza.nombre)}
-          pizzasPrecios = {this.state.pizzas.map((pizza) => pizza.precio)}
+          pizzas = {this.state.pizzas}
           />
           <PizzaIngredientes 
           ingredientes = {this.state.ingredientes.map((ingrediente) => ingrediente.nombre)}

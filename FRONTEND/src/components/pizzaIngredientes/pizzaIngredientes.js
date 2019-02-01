@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 
 import { Button, Popover, PopoverHeader, PopoverBody } from "reactstrap";
 
-// import './pizzaMitades.css'
-
 
 export class PizzaIngredientes extends Component {
   constructor(props) {
@@ -99,6 +97,7 @@ export class PizzaIngredientes extends Component {
                   Ingrediente 2:
                   <br/>
                   <select onChange={this.handleIng2}>
+                  <option>{this.state.ing2}</option>
                   {this.props.ingredientes.map((nombre, index) =>(
                       <option key={index} value={nombre}>{nombre}</option>
                   ))}
@@ -107,6 +106,7 @@ export class PizzaIngredientes extends Component {
                   Ingrediente 3:
                   <br/>
                   <select onChange={this.handleIng3}>
+                  <option>{this.state.ing3}</option>
                   {this.props.ingredientes.map((nombre, index) =>(
                       <option key={index} value={nombre}>{nombre}</option>
                   ))}
@@ -115,6 +115,7 @@ export class PizzaIngredientes extends Component {
                   Ingrediente 4:
                   <br/>
                   <select onChange={this.handleIng4}>
+                  <option>{this.state.ing4}</option>
                   {this.props.ingredientes.map((nombre, index) =>(
                       <option key={index} value={nombre}>{nombre}</option>
                   ))}
@@ -123,6 +124,7 @@ export class PizzaIngredientes extends Component {
                   Ingrediente 5:
                   <br/>
                   <select onChange={this.handleIng5}>
+                  <option>{this.state.ing5}</option>
                   {this.props.ingredientes.map((nombre, index) =>(
                       <option key={index} value={nombre}>{nombre}</option>
                   ))}

@@ -9,15 +9,16 @@ export class PizzaMitades extends Component {
   constructor(props) {
     super(props);
 
+    
     this.toggle = this.toggle.bind(this);
     this.state = {
       popoverOpen: false,
       size: "mediana",
       qty: 1,
-      mitad1: "De la Huerta",
-      mitad2: "De la Huerta",
+      mitad1: "De la Huerta x 9.97 €",
+      mitad2: "De la Huerta x 9.97 €",
       nombre: "Pizza Personalizada",
-      price: 25
+      price: "Personalizado"
     };
   }
   toggle() {
@@ -53,7 +54,7 @@ export class PizzaMitades extends Component {
           <div id="pizza-mitades">
             <img src="https://www.scoozipizza.com/wp-content/uploads/2018/07/MAIN-3.png" alt={this.nombre} />
             <p>Pizza por mitades</p>
-            <p>PRECIO: {this.state.price} €</p>
+            <p>PRECIO: {this.state.price}</p>
             <Button
               id={"Popover-" + this.props.id}
               type="button"
@@ -71,19 +72,16 @@ export class PizzaMitades extends Component {
               <PopoverHeader className="text-center">{this.nombre}</PopoverHeader>
               <PopoverBody>
                 Mitad 1:
-                <br/>
-                <select name="" id="" onChange={this.handleMitad2}>
-                  {this.props.pizzasNombres.map((nombre, index) => (
-                    <option key = {index} value={nombre}>{nombre}</option>
-                  ))}                  
-                </select>                 
-                <br/>
+                <select onChange={this.handleMitad1}>
+                  {this.props.pizzas.map((pizza, index) => (
+                    <option  key={index}>{pizza.nombre} x {pizza.precio / 2} €</option>
+                  ))}
+                </select>
                 Mitad 2:
-                <br/>
-                <select name="" id="" onChange={this.handleMitad2}>
-                  {this.props.pizzasNombres.map((nombre, index) => (
-                    <option key = {index} value={nombre}>{nombre}</option>
-                  ))}                  
+                <select onChange={this.handleMitad2}>
+                  {this.props.pizzas.map((pizza, index) => (
+                    <option key={index}>{pizza.nombre} x {pizza.precio / 2} €</option>
+                  ))}
                 </select>
                 <br/>
                 <br/>
