@@ -66,8 +66,6 @@ export class Pizzas extends Component {
           >
             <PopoverHeader className="text-center">{this.nombre}</PopoverHeader>
             <PopoverBody>
-              {/* {this.ingredientes}
-             */}
              {ingredientesMapeados}
               <br/>
               <select name="" id="" onChange={this.handleSize}>

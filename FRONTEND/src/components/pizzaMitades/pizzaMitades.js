@@ -15,10 +15,16 @@ export class PizzaMitades extends Component {
       popoverOpen: false,
       size: "mediana",
       qty: 1,
-      mitad1: "De la Huerta x 9.97 €",
-      mitad2: "De la Huerta x 9.97 €",
+      mitad1: {
+        nombre: '',
+        precio: 0
+      },
+      mitad2: {
+        nombre: '',
+        precio: 0
+      },
       nombre: "Pizza Personalizada",
-      price: "Personalizado"
+      price: "Personalizado",
     };
   }
   toggle() {
@@ -37,17 +43,20 @@ export class PizzaMitades extends Component {
     })
   }
   handleMitad1 = (event) => {
+    console.log(JSON.parse(event.target.value));
     this.setState({
-      mitad1: event.target.value
+      mitad1: JSON.parse(event.target.value)
     })
   }
   handleMitad2 = (event) => {
     this.setState({
-      mitad2: event.target.value
+      mitad2: JSON.parse(event.target.value)
     })
   }
 
+
   render() {
+    console.log(this.state.mitad1)
     return (
       <div>
         <div className="col shadow p-3 mb-5 bg-white rounded m-1">
@@ -74,13 +83,13 @@ export class PizzaMitades extends Component {
                 Mitad 1:
                 <select onChange={this.handleMitad1}>
                   {this.props.pizzas.map((pizza, index) => (
-                    <option  key={index}>{pizza.nombre} x {pizza.precio / 2} €</option>
+                    <option value={JSON.stringify({nombre:pizza.nombre, precio: pizza.precio / 2})} key={index}>{pizza.nombre} x {pizza.precio / 2} €</option>
                   ))}
                 </select>
                 Mitad 2:
                 <select onChange={this.handleMitad2}>
                   {this.props.pizzas.map((pizza, index) => (
-                    <option key={index}>{pizza.nombre} x {pizza.precio / 2} €</option>
+                    <option value={JSON.stringify({nombre:pizza.nombre, precio: pizza.precio / 2})} key={index}>{pizza.nombre} x {pizza.precio / 2} €</option>
                   ))}
                 </select>
                 <br/>
@@ -101,7 +110,7 @@ export class PizzaMitades extends Component {
               <Button
                 className="btn btn-danger col"
                 id={this.id}
-                onClick={this.props.addPizza.bind(this, ["Mitad 1: "+this.state.mitad1 +" - Mitad 2: "+ this.state.mitad2], this.state.price, this.state.size, this.state.qty)}
+                onClick={this.props.addPizza.bind(this, "Mitad 1: "+this.state.mitad1.nombre +" - Mitad 2: "+ this.state.mitad2.nombre , this.state.mitad1.precio + this.state.mitad2.precio, this.state.size, this.state.qty)}
               >
                 COMPRAR
             </Button>
